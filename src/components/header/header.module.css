@@ -6,4 +6,13 @@
 .row{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: 45px;
+    width: 194px;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
 }

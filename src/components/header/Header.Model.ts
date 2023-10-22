@@ -1,3 +1,3 @@
-type HeaderProps ={
+// type HeaderProps ={
     
-}
+// }

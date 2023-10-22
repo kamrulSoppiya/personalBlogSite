@@ -1,0 +1,14 @@
+.row{
+    background-color: #EFF0F3;
+    height: 600px;
+    width: 100%;
+}
+.container_bg_Img{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+}
+.container_bg_Img img{
+    height: 100%;
+    width: 100%;
+}
