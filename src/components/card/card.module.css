@@ -1,0 +1,16 @@
+.card_structure{
+    width: 300px;
+    height: 425px;
+    padding: 20px;
+    box-shadow: 5px 3px 9px -8.9px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.overlay{
+    background-color: green;
+}
+.card_structure:hover .overlay{
+    background-color:red;
+}

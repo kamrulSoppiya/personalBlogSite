@@ -1,0 +1,28 @@
+.row{
+    display: flex;
+    gap: 15px;
+    width: 609px;
+    height: 67px;
+}
+input{
+    width: 444px !important;
+    height: 100%;
+    border-radius: 8px;
+    border:none; 
+    outline:none;
+    box-shadow: 0.2px 0.2px;
+    padding:0 15px;
+    font-size: 16px;
+    color: var(--dark_gray);
+}
+.btn{
+    width: 145px;
+    height: 100%;
+    border-radius: 8px;
+    border:none; 
+    outline:none;
+    box-shadow: 0.2px 0.2px;
+    background-color: var(--blue);
+    color: white;
+    font-size: 20px;
+}

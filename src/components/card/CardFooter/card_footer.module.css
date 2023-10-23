@@ -1,0 +1,21 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer img{
+    border-radius: 50%;
+    width: 57px;
+    height: 57px;
+}
+.publisherInfo{
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+.publisher_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

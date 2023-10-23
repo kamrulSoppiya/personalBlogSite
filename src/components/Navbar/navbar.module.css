@@ -1,6 +1,24 @@
 .row ul{
     list-style: none;
     display: flex;
-    gap:20px;
+    gap:50px;
+    align-items: center;
+}
+.active{
+    color: #6246EA !important;
+}
+.dim{
+    color:rgb(136, 136, 136) !important;
+}
+.btn{
+    text-decoration:none;
+    font-size: 16px;
+    color: #FFFFFE; 
+    box-shadow: 0.2px 0.2px 3px 4px !important;
+    background-color:#6246EA;
+    padding:10px 17px;
+    border-radius: 6px;
+    border:none;
+    outline:none;
 }
 
