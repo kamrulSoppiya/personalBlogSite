@@ -2,10 +2,8 @@ import { NavLink } from "react-router-dom";
 import style from './navbar.module.css';
 import Button from "../button/Button";
 import Search from "../pages/Search";
-export default function Navbar() {
-  const onCoffeeModal = ()=>{
-    alert('Buy Coffee');
-  }
+
+export default function Navbar({openModal}) {
   return (
     <div className={style.row}>
       <ul >  
@@ -23,7 +21,7 @@ export default function Navbar() {
             <Search />
         </li>
         <li>
-            <Button type="button" children="Buy Me A Coffee" className={style.btn} onClick={onCoffeeModal}/>
+            <Button type="button" children="Buy Me A Coffee" className={style.btn} onClick={openModal}/>
         </li>
       </ul>
     </div>
