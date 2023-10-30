@@ -47,9 +47,9 @@ export default function FooterContent() {
                             </ul>
                         </div>
                     </div>
-                    <div className={style.footer_bottom}>
+                    {/* <div className={style.footer_bottom}>
                         <SocialIcon />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </footer>

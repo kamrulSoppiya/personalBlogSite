@@ -28,7 +28,7 @@ export default function Header() {
             <div className={style.logo}>
                 <img src={logo} alt="website logo" />
             </div>
-            <Navbar openModal={openModal}/>
+            <Navbar/>
             {/* <Modal isOpen={isModalOpen} isClose={closeModal}>
                 <h2>Modal</h2>
                 <p>This is a simple modal example.</p>

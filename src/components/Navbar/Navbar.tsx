@@ -1,29 +1,76 @@
 import { NavLink } from "react-router-dom";
 import style from './navbar.module.css';
 import Button from "../button/Button";
-import Search from "../pages/Search";
+import { MenuItem } from './Navbar.Model';
+import { useState } from 'react';
+import useModal from '../modal/hook/useModal.jsx';
+import Modal from "../modal/Modal.js";
+// import Modal from "../modal/Modal.js";
 
-export default function Navbar({openModal}) {
+export default function Navbar() {
+  const [selectedMenuItem, setSelectedMenuItem] = useState(null);
+  const { isOpen,toggle } = useModal();
+  const menuItems: MenuItem[] = [
+    {
+      label: 'Home',
+      to: '/'
+    },
+    {
+      label: 'Category',
+      to: '/category',
+      options: [{ key: 'Option A', value: ['dropDown1', 'dropDown2', 'dropDown3'] }],
+    },
+    {
+      label: 'About',
+      to: '/about',
+      options: [{ key: 'Option A', value: ['dropDown1', 'dropDown2', 'dropDown3'] }],
+    },
+    {
+      label: 'Search',
+      to: '/search'
+    },
+  ];
+
+  const onMenuItemClick = (menuItemLabel) => {
+    if (selectedMenuItem === menuItemLabel) {
+      setSelectedMenuItem(null);
+    } else {
+      setSelectedMenuItem(menuItemLabel);
+    }
+  }
+
   return (
     <div className={style.row}>
-      <ul >  
-        <li>
-            <NavLink style={{textDecoration:'none', fontSize: '20px',color: 'black'}} className={({isActive})=> isActive?style.active:style.dim} to="/">Home</NavLink>
-        </li>
-        <li>
-            <NavLink style={{textDecoration:'none', fontSize: '20px',color: 'black'}} className={({isActive})=> isActive?style.active:style.dim} to="/category">Category</NavLink>
-        </li>
-        <li>
-            <NavLink style={{textDecoration:'none', fontSize: '20px',color: 'black'}} className={({isActive})=> isActive?style.active:style.dim} to="/aboutMe">About Me</NavLink>
-        </li>
-        <li>
-            <NavLink style={{textDecoration:'none', fontSize: '20px',color: 'black'}} className={({isActive})=> isActive?style.active:style.dim} to="/search">Search</NavLink>
-            <Search />
-        </li>
-        <li>
-            <Button type="button" children="Buy Me A Coffee" className={style.btn} onClick={openModal}/>
-        </li>
-      </ul>
+      {menuItems.map((menuItem, index) => {
+        return (
+          <div key={index} className={style.dropDownBtn}>
+            <div>
+              <NavLink
+                style={{ textDecoration: 'none', fontSize: '17px', color: 'black'}}
+                className={selectedMenuItem === menuItem.label ? style.active : style.dim}
+                onClick={() => onMenuItemClick(menuItem.label)}
+                to={menuItem.to}
+              >
+                {menuItem.label}
+              </NavLink>
+            </div>
+            {selectedMenuItem === menuItem.label && menuItem.options ? (
+              <div className={style.dropDown_content}>
+                {menuItem.options.map((option, optionIndex) => (
+                  <div key={optionIndex} style={{}}>
+                    {option.value?.map((value, valueIndex) => (
+                      <ul className={style.dropDownUl} key={valueIndex}>
+                        <li><a href="">{value}</a></li>
+                      </ul>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ) : ''}
+          </div>
+        )
+      })}
+      <Button type="button" children="Buy Me A Coffee" onClick={toggle} className={style.btn} />
     </div>
   )
 }

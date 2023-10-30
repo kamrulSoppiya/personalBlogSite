@@ -1,11 +1,11 @@
-.row ul{
-    list-style: none;
+.row{
     display: flex;
-    gap:50px;
+    gap:20px;
     align-items: center;
+    font-weight: 400;
 }
 .active{
-    color: #6246EA !important;
+    color: #004658 !important;
 }
 .dim{
     color:rgb(136, 136, 136) !important;
@@ -16,9 +16,30 @@
     color: #FFFFFE; 
     box-shadow: 0.2px 0.2px 3px 4px !important;
     background-color:#6246EA;
-    padding:10px 17px;
+    padding:7px 15px;
     border-radius: 6px;
     border:none;
     outline:none;
+}
+.dropDownUl{
+    list-style: none;
+}
+.dropDownBtn{
+    position: relative;
+}
+.dropDown_content{
+    position: absolute;
+    z-index: 3;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgb(248, 247, 247);
+}
+.dropDown_content ul li a{
+    color: #004658;
+    padding: 7px 10px;
+    display: block;
+}
+.dropDown_content ul li :hover{
+    color: white;
+    background-color: #044657;
 }
 

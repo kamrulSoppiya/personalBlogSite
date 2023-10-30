@@ -13,6 +13,8 @@ import AboutMe from "./components/pages/AboutMe";
 import Search from "./components/pages/Search";
 import Coffee from "./components/pages/Coffee";
 import Layout from "./components/pages/Layout";
+import Modal from "./components/modal/Modal";
+import useModal from "./components/modal/hook/useModal";
 // import Banner from "./components/banner/Banner";
 // import Subsribe from "./components/subScription/subsribe";
 // import SearchComponent from "./components/search/Search";
@@ -36,9 +38,10 @@ function App() {
   //   'Watermelon',
   // ];
   // Uses for NavBar Modal 
-
+  const { isOpen, toggle } = useModal();
   return (
     <div className="">
+      {/* <SearchComponent /> */}
       {/* <FooterContent /> */}
       {/* <SocialIcon /> */}
       <BrowserRouter>
@@ -46,11 +49,14 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/category" element={<Category />} />
-                <Route path="/aboutMe" element={<AboutMe />} />
+                <Route path="/about" element={<AboutMe />} />
                 <Route path="/search" element={<Search/>} />
                 <Route path="/coffee" element={<Coffee />}/>
             </Routes>
         </Layout>
+        <Modal isOpen={isOpen} toggle={toggle}>
+          <div>Yaay!!! Our Modal is rendered Properly.</div>
+        </Modal>
       </BrowserRouter>
       {/* <CategoryItem /> */}
       {/* <SearchComponent dummyData={dummyData}/> */}

@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
 import style from '../category/CategoryCard/category.module.scss';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 import CategoryCard from '../category/CategoryCard/CategoryCard'; 
 
-const CategoryCarousel = () => {
+const CategoryCarousel = (props) => {
+
   const categoryData = [
     {
       cardName: "CSS",
@@ -61,31 +63,41 @@ const CategoryCarousel = () => {
 
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const autoReplay = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % categoryData.length);
-    }, 100);
-
-    return () => {
-      clearInterval(autoReplay);
-    };
-  }, [categoryData.length]);
 
   return (
-    <div className="category-carousel">
-        <div className={style.categoryItem}>
-            <div className={style.container}>
-                {categoryData.map((category, index) => (
-                    <div key={index} className={`carousel-card ${index === currentIndex ? 'active' : ''}`}>
-                        <CategoryCard cardName={category.cardName} cardTitle={category.cardTitle} cardInfo={category.cardInfo} cardBtn={category.cardBtn}/>
-                    </div>
-                ))}
-            </div>
+
+    <Carousel
+      swipeable={false}
+      draggable={false}
+      showDots={true}
+      responsive={responsive}
+      ssr={true} // means to render carousel on server-side.
+      infinite={true}
+      autoPlay={props.deviceType !== "mobile" ? true : false}
+      autoPlaySpeed={1000}
+      keyBoardControl={true}
+      customTransition="all .5"
+      transitionDuration={3000}
+      containerClass="carousel-container"
+      removeArrowOnDeviceType={["tablet", "mobile"]}
+      deviceType={props.deviceType}
+      dotListClass="custom-dot-list-style"
+      itemClass="carousel-item-padding-40-px"
+    >
+      {categoryData.map((category, index) => (
+                <CategoryCard key={index} cardName={category.cardName} cardTitle={category.cardTitle} cardInfo={category.cardInfo} cardBtn={category.cardBtn}/>
+          ))}
+    {/* <div className={style.category_carousel}>
+      <div className={style.categoryItem}>
+        <div className={style.container}>
+          {categoryData.map((category, index) => (
+                <CategoryCard key={index} cardName={category.cardName} cardTitle={category.cardTitle} cardInfo={category.cardInfo} cardBtn={category.cardBtn}/>
+          ))}
         </div>
-    </div>
+      </div>
+    </div>   */}
+    </Carousel> 
   );
-};
+}
 
 export default CategoryCarousel;
