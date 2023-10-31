@@ -13,8 +13,8 @@ export default function Subsribe() {
 
     return (
         <div className={style.row}>
-        <Input type="text" placeholder="Enter your email here ...." value={inputEmail} onChange={inputChange} />
-        <Button type="submit" children='Subscribe' className={style.btn}/>
+            <Input type="text" placeholder="Enter your email here ...." value={inputEmail} onChange={inputChange} />
+            <Button type="submit" children='Subscribe' className={style.btn}/>
         </div>
     )
 }

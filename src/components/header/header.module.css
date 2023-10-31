@@ -7,13 +7,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: #004658; */
 }
-.logo{
-    height: 35px;
-    width: 150px;
+.row i{
+    display: none;
 }
-.logo img{
-    height: 100%;
-    width: 100%;
-}
+@media only screen and (max-width: 408px){
+    .row i{
+        display: block;
+    }
+  }
+  @media only screen and (min-width: 408px) and (max-width: 600px) {
+   
+  }
+  
+  @media only screen and (min-width: 600px) {
+   
+  }
+  
+  @media only screen and (min-width: 768px) {
+    
+  }
+  
+  @media only screen and (min-width: 992px) {}
+  
+  @media only screen and (min-width: 1200px) {}
+

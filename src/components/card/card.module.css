@@ -1,8 +1,8 @@
 .card_structure{
-    width: 300px;
+    max-width: 300px;
     height: 425px;
     padding: 20px;
-    box-shadow: 5px 3px 9px -8.9px;
+    box-shadow: 1px 0px 8px -5.9px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;

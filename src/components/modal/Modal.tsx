@@ -6,13 +6,13 @@ interface ModalType {
   toggle: () => void;
 }
 
-export default function Modal(props: ModalType) {
+export default function Modal({isOpen, children, toggle }: ModalType) {
   return (
     <>
-      {props.isOpen && (
-        <div className={style.modal_overlay} onClick={props.toggle} >
+      {isOpen && (
+        <div className={style.modal_overlay} onClick={toggle} >
           <div onClick={(e) => e.stopPropagation()} className={style.modal_box}>
-            {props.children}
+            {children}
           </div>
         </div>
       )}

@@ -1,27 +1,76 @@
-.row{
+.row {
     background-color: #EFF0F3;
-    height: 700px;
     width: 100%;
-}
-.container_bg_Img{
-    position: fixed;
-    height: 700px;
-    left: 70px;
-    right: 50px;
-    z-index: -1;
-}
-.container_bg_Img img{
-    height: 100%;
-    width: 100%;
-    object-fit:cover;
-}
-.bannerDiv{
+    background-image: url('../../assets/img/Dot.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+  }
+  .content {
     display: flex;
     justify-content: space-between;
-    z-index: 1;
-}
-.right img{
-    height: auto;
-    max-width: 470px;
+    padding-top: 5vw;
+  }
+  .leftContent{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+  }
+  .leftContent p {
+    color: darkgrey;
+    font-size: 20px;
+    margin-bottom:20px;
+  }
+  
+  .rightContent img {
+    min-height: 300px;
     width: 100%;
-}
+  }
+
+  @media only screen and (max-width: 599px) {
+    .content{
+      flex-direction: column;
+      gap:30px;
+      padding-bottom: 60px;
+    }
+    .leftContent h1{
+      font-size: 35px !important;
+    }
+    .rightContent img {
+      min-height: 180px;
+      min-width: 200px;
+      width: 90%;
+      margin: auto;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) and (max-width: 767px) {
+    .content{
+      flex-direction: column;
+      gap:30px;
+      padding-bottom: 60px;
+    }
+    .leftContent h1{
+      font-size: 40px !important;
+    }
+    .rightContent img {
+      max-height: 487px;
+      min-height: 180px;
+      min-width: 200px;
+      max-width: 800px;
+      width: 80%;
+      display: block;
+      object-fit: cover;  
+      margin: auto;
+    }
+
+  }
+  
+  @media only screen and (min-width: 768px) {}
+  
+  @media only screen and (min-width: 992px) {}
+  
+  @media only screen and (min-width: 1200px) {}
+  

@@ -14,7 +14,7 @@
     --blue: #6246EA;
 }
 .container{
-    margin: 9px 95px 14px 95px;
+    margin: 9px 95px 0px 95px;
 }
 .h1{
     font-size: 64px;
@@ -49,5 +49,31 @@
     font-size: 14px;
     font-weight: regular;
 }
+ @media only screen and (max-width: 408px){
+    .container{
+        margin: 9px 10px 0 10px;
+    }
+  }
+  @media only screen and (min-width: 408px) and (max-width: 600px) {
+    .container{
+        margin: 9px 10px 14px 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .container{
+        margin: 9px 10px 0 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    
+  }
+  
+  @media only screen and (min-width: 992px) {}
+  
+  @media only screen and (min-width: 1200px) {}
 
 
+
+  

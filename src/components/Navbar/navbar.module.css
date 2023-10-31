@@ -1,45 +1,87 @@
-.row{
+.row {
     display: flex;
-    gap:20px;
+    gap: 20px;
     align-items: center;
     font-weight: 400;
-}
-.active{
+  }
+  
+  .active {
     color: #004658 !important;
-}
-.dim{
-    color:rgb(136, 136, 136) !important;
-}
-.btn{
-    text-decoration:none;
+  }
+  
+  .dim {
+    color: rgb(136, 136, 136) !important;
+  }
+  
+  .btn {
+    text-decoration: none;
     font-size: 16px;
-    color: #FFFFFE; 
+    color: #FFFFFE;
     box-shadow: 0.2px 0.2px 3px 4px !important;
-    background-color:#6246EA;
-    padding:7px 15px;
+    background-color: #004658;
+    padding: 7px 15px;
     border-radius: 6px;
-    border:none;
-    outline:none;
-}
-.dropDownUl{
+    border: none;
+    outline: none;
+  }
+  
+  .dropDownUl {
     list-style: none;
-}
-.dropDownBtn{
+  }
+  
+  .dropDownBtn {
     position: relative;
-}
-.dropDown_content{
+  }
+  
+  .dropDown_content {
     position: absolute;
     z-index: 3;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     background-color: rgb(248, 247, 247);
-}
-.dropDown_content ul li a{
+  }
+  
+  .dropDown_content ul li a {
     color: #004658;
     padding: 7px 10px;
     display: block;
-}
-.dropDown_content ul li :hover{
+  }
+  
+  .dropDown_content ul li :hover {
     color: white;
     background-color: #044657;
-}
-
+  }
+  
+  @media only screen and (max-width: 408px) {
+    .row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      font-weight: 400;
+    }
+  }
+  
+  @media only screen and (min-width: 408px) and (max-width: 600px) {
+    .row {
+      margin: 9px 10px 14px 10px; /* Adjusted the class name from container to row */
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .row {
+      margin: 9px 10px 0 10px; /* Adjusted the class name from container to row */
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* Add styles for larger screens if needed */
+  }
+  
+  @media only screen and (min-width: 992px) {
+    /* Add styles for even larger screens if needed */
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    /* Add styles for the largest screens if needed */
+  }
+  

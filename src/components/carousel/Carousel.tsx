@@ -1,6 +1,5 @@
 import Slider from "react-slick";
 import CategoryCard from "../category/CategoryCard/CategoryCard";
-
 export default function Carousel(){
   const settings = {
     dots: false,
@@ -16,7 +15,7 @@ export default function Carousel(){
           slidesToShow: 5,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
@@ -25,7 +24,7 @@ export default function Carousel(){
           slidesToShow: 4,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
@@ -34,7 +33,7 @@ export default function Carousel(){
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
@@ -124,7 +123,8 @@ export default function Carousel(){
    
     return (
       <div style={{background:'#004658'}}>
-        <div className="container">
+        <div style={{margin: `0 95px 0 95px`}}>
+        <h3 style={{paddingTop:'20px', color:'white'}}>Browse The Category -</h3>
           <Slider {...settings}>
             {categoryData.map((category, index) => (
               <CategoryCard key={index} cardName={category.cardName} cardTitle={category.cardTitle} cardInfo={category.cardInfo} cardBtn={category.cardBtn}/>

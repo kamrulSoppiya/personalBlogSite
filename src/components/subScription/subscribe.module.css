@@ -1,7 +1,7 @@
 .row{
     display: flex;
     gap: 15px;
-    width: 609px;
+    max-width: 609px;
     height: 67px;
 }
 input{
@@ -23,7 +23,31 @@ input{
     border:none; 
     outline:none;
     box-shadow: 0.2px 0.2px;
-    background-color: var(--blue);
+    background-color: #004658;
     color: white;
     font-size: 20px;
 }
+
+@media only screen and (min-width: 4038px) and (max-width: 600px) {
+    .row{
+        gap: 5px;
+    }
+    input{
+        height: 50px;
+        padding:0 6px;
+        font-size: 14px;
+ 
+}
+    .btn{
+        height: 50px;
+        font-size: 14px;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {}
+  
+  @media only screen and (min-width: 768px) {}
+  
+  @media only screen and (min-width: 992px) {}
+  
+  @media only screen and (min-width: 1200px) {}
