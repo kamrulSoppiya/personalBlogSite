@@ -1,5 +1,5 @@
 
-import FooterContent from '../footer/footerContent/FooterContent';
+// import FooterContent from '../footer/footerContent/FooterContent';
 import Header from '../header/Header';
 
 type LayoutProps ={

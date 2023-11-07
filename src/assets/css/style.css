@@ -12,6 +12,7 @@
     --gray: #C0C0C0;
     --black: #2B2C34;
     --blue: #6246EA;
+    --common_color: #004658;
 }
 .container{
     margin: 9px 95px 0px 95px;
@@ -48,26 +49,36 @@
     color:#000000;
     font-size: 14px;
     font-weight: regular;
-}
+}  
+.active {
+    background-color: var(--common_color);
+    color: #ffffff !important;
+  }
+  
+  .dim {
+    color: rgb(136, 136, 136) !important;
+  }
  @media only screen and (max-width: 408px){
     .container{
         margin: 9px 10px 0 10px;
     }
   }
-  @media only screen and (min-width: 408px) and (max-width: 600px) {
+  @media only screen and (min-width: 409px) and (max-width: 600px) {
     .container{
-        margin: 9px 10px 14px 10px;
+        margin: 0 10px 0px 10px;
     }
   }
   
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 601px) {
     .container{
         margin: 9px 10px 0 10px;
     }
   }
   
   @media only screen and (min-width: 768px) {
-    
+    .container{
+        margin: 10px 95px 10px 95px;
+    }
   }
   
   @media only screen and (min-width: 992px) {}

@@ -1,19 +1,32 @@
-import style from './header.module.css';
+import style from '../header/header.module.css';
 // import {HeaderProps} from './Header.Model';
 // import logo from '../../assets/img/Logo.png';
 // import Modal from '../modal/Modal';
 // import useModal from '../modal/hook/useModal';
-
+import { Spin as Hamburger } from 'hamburger-react'
 import Navbar from '../Navbar/Navbar';
+import { useState } from 'react';
+import Logo from '../Navbar/Logo';
 export default function Header() {
+    const [menuOpen, setmenuOpen] = useState(false);
+
+    const collapseNavbar = () =>{
+        setmenuOpen(!menuOpen);
+    }
     return (
-        <div className="container">
+        <div className={style.wrapper}>
             <div className={style.row}>
-                <div className={style.logo}>
-                    <h2 style={{display:'flex', fontSize:'30px', alignItems:'center'}}>Dasteen. <span style={{color:'#004658', fontSize:'32px'}}>Blog</span></h2>
+                <div className="container">
+                    <div className={style.headerItems}>
+                        <Logo />
+                        <Hamburger direction="right" onToggle={collapseNavbar} />
+                    </div>
                 </div>
-                <Navbar/>
             </div>
+            <Navbar isOpen = {menuOpen}/>
         </div>
     )
 }
+
+
+

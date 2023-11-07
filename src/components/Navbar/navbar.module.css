@@ -1,18 +1,25 @@
-.row {
+  .row {
     display: flex;
-    gap: 20px;
-    align-items: center;
+    align-items: start !important;
     font-weight: 400;
+    cursor: pointer;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--common_color);
   }
-  
-  .active {
-    color: #004658 !important;
+  .menu_item{
+    width: 100%;
   }
-  
-  .dim {
-    color: rgb(136, 136, 136) !important;
+  .linkDesing{
+    text-decoration: none; 
+    font-size: 17px; 
+    color: #004658; 
+    display:block;
   }
-  
+  .menu_item:hover .linkDesing{
+    color: white !important;
+    background-color: var(--common_color);
+    height: 100%;
+  }
   .btn {
     text-decoration: none;
     font-size: 16px;
@@ -23,32 +30,7 @@
     border-radius: 6px;
     border: none;
     outline: none;
-  }
-  
-  .dropDownUl {
-    list-style: none;
-  }
-  
-  .dropDownBtn {
-    position: relative;
-  }
-  
-  .dropDown_content {
-    position: absolute;
-    z-index: 3;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    background-color: rgb(248, 247, 247);
-  }
-  
-  .dropDown_content ul li a {
-    color: #004658;
-    padding: 7px 10px;
-    display: block;
-  }
-  
-  .dropDown_content ul li :hover {
-    color: white;
-    background-color: #044657;
+    margin-top: 20px;
   }
   
   @media only screen and (max-width: 408px) {
@@ -60,28 +42,40 @@
       font-weight: 400;
     }
   }
-  
-  @media only screen and (min-width: 408px) and (max-width: 600px) {
+
+  @media only screen and (min-width: 409px) and (max-width: 600px) {
     .row {
-      margin: 9px 10px 14px 10px; /* Adjusted the class name from container to row */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 400;
     }
   }
   
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 601px) {
     .row {
-      margin: 9px 10px 0 10px; /* Adjusted the class name from container to row */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 400;
     }
+   
   }
   
   @media only screen and (min-width: 768px) {
-    /* Add styles for larger screens if needed */
+    .row {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+    }
+     
   }
   
   @media only screen and (min-width: 992px) {
-    /* Add styles for even larger screens if needed */
+    
   }
   
   @media only screen and (min-width: 1200px) {
-    /* Add styles for the largest screens if needed */
+   
   }
   

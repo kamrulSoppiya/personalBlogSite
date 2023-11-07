@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import CategoryCard from "../category/CategoryCard/CategoryCard";
+import style from './carousel.module.scss';
 export default function Carousel(){
   const settings = {
     dots: false,
@@ -122,9 +123,9 @@ export default function Carousel(){
   ];
    
     return (
-      <div style={{background:'#004658'}}>
-        <div style={{margin: `0 95px 0 95px`}}>
-        <h3 style={{paddingTop:'20px', color:'white'}}>Browse The Category -</h3>
+      <div className={style.mainBody}>
+        <div className={style.marginBody}>
+        <h3 className={style.mainBodyHeading3}>Browse The Category -</h3>
           <Slider {...settings}>
             {categoryData.map((category, index) => (
               <CategoryCard key={index} cardName={category.cardName} cardTitle={category.cardTitle} cardInfo={category.cardInfo} cardBtn={category.cardBtn}/>
