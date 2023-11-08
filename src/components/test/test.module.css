@@ -96,13 +96,71 @@ li button{
 /* ------------ Humburger ----------------- */
 
 @media only screen and (max-width: 408px){
-    
-    .megaMenu{
-        flex-direction: column;
-        left: 10px;
+    nav{
+        border-bottom: 0;
+    }
+    .wrapper{
+        border-bottom: 1px solid var(--dark_gray);
     }
     .menu{
         display: none;
+    }
+    li{
+        padding: 2px;
+    }
+    li a{
+        font-size: 18px;
+    }
+    .mainMenuList{
+        flex-direction: column;
+        text-align: start;
+        gap:8px;
+    }
+    .menuItem{
+        justify-content: start;
+    }
+    .dropable_items{
+        position: static;
+    }
+    .megaMenu{
+        flex-direction: column;
+        padding: 0;
+        margin:0 15px;
+        box-shadow: 0 0 0 0;
+        text-align: start;
+        gap: 15px;
+    }
+    .megaMenu li a h4{
+        background-color: var(--common_color);
+        color: white;
+        padding: 6px;
+    }
+    .megaMenu li ul li{
+        display: flex;
+        justify-content: start;
+        cursor: pointer;
+    }
+    .megaMenu li ul li:hover{
+        background-color: rgb(206, 134, 0);
+        color: white;
+    }
+    .megaMenu li ul li:hover a{
+        color: white;
+    }
+    .megaMenu li img{
+        width: 140px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 6px;
+        box-shadow: 0.2px 1.6px 5px -1.7px;
+        border-radius: 5px;
+    }
+    .big{
+        max-width: 180px !important;
+    }
+    .animation{
+        width: 100%;
+        height: 100%;
     }
   }
   @media only screen and (min-width: 409px) and (max-width: 600px) {
@@ -174,12 +232,76 @@ li button{
     }
   }
   
-  @media only screen and (min-width: 601px) {
-    .animation{
-        display: none;
+  @media only screen and (min-width: 601px) and (max-width: 767px) {
+    nav{
+        border-bottom: 0;
+    }
+    .wrapper{
+        border-bottom: 1px solid var(--dark_gray);
     }
     .menu{
         display: none;
+    }
+    li{
+        padding: 2px;
+    }
+    li a{
+        font-size: 18px;
+    }
+    .mainMenuList{
+        flex-direction: column;
+        text-align: start;
+        gap:8px;
+    }
+    .menuItem{
+        justify-content: start;
+    }
+    .dropable_items{
+        position: static;
+    }
+    .megaMenu{
+        flex-direction: row;
+        padding: 0;
+        flex-wrap: wrap;
+        margin:0 15px;
+        box-shadow: 0 0 0 0;
+        text-align: start;
+        gap: 15px;
+    }
+    .megaMenu li{
+        width: calc(100%/2 - 10px);
+    }
+    .megaMenu li a h4{
+        background-color: var(--common_color);
+        color: white;
+        padding: 6px;
+    }
+    .megaMenu li ul li{
+        display: flex;
+        justify-content: start;
+        cursor: pointer;
+    }
+    .megaMenu li ul li:hover{
+        background-color: rgb(206, 134, 0);
+        color: white;
+    }
+    .megaMenu li ul li:hover a{
+        color: white;
+    }
+    .megaMenu li img{
+        width: 140px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 6px;
+        box-shadow: 0.2px 1.6px 5px -1.7px;
+        border-radius: 5px;
+    }
+    .big{
+        width: 250px !important;
+    }
+    .animation{
+        width: 100%;
+        height: 100%;
     }
   }
   
@@ -190,9 +312,7 @@ li button{
     .humburgerIcon{
         display: none;
     }
-    .menu{
-        display: block;
-    }
+    
   }
   
   @media only screen and (min-width: 992px) {
