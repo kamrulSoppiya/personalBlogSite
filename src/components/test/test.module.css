@@ -1,0 +1,207 @@
+
+nav{
+    border-bottom: 1px solid var(--dark_gray);
+}
+.nav_items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 25px;
+    font-weight: 800;
+}
+.logo span{
+    color: green;
+}
+ul{
+    list-style: none;
+}
+li{
+    padding: 5px 0;
+}
+li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--dark_gray);
+}
+li button{
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--common_color);
+    padding: 4px 8px;
+    color: var(--light_gray2);
+    font-weight: 400;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.mainMenuList{
+    display: flex;
+    gap:25px;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+}
+.menuItem{
+    display: flex;
+    justify-content: center;
+}
+.dropable_items{
+    position: absolute;
+    top: 48px;
+    z-index:99;
+}
+.megaMenu{
+    right: 0;
+    display: flex;
+    gap:27px;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    background-color: white;
+    box-shadow: 0.2px 1.6px 5px -1.7px;
+}
+.megaMenu li{
+    width: calc(100%/3 -13.33px);
+}
+
+.megaMenu li a h4{
+    margin-bottom: 6px;
+}
+.megaMenu li ul li{
+    display: flex;
+    justify-content: center
+}
+.megaMenu ul li img{
+    width: 140px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0.2px 1.6px 5px -1.7px;
+}
+.big{
+    width: 200px !important;
+}
+.animation{
+    object-fit: cover;
+    width: 200px;
+    height: 100%;
+}
+/*  ----------------- Mobile Display ---------- */
+/* ------------ Humburger ----------------- */
+
+@media only screen and (max-width: 408px){
+    
+    .megaMenu{
+        flex-direction: column;
+        left: 10px;
+    }
+    .menu{
+        display: none;
+    }
+  }
+  @media only screen and (min-width: 409px) and (max-width: 600px) {
+    nav{
+        border-bottom: 0;
+    }
+    .wrapper{
+        border-bottom: 1px solid var(--dark_gray);
+    }
+    .menu{
+        display: none;
+    }
+    li{
+        padding: 2px;
+    }
+    li a{
+        font-size: 18px;
+    }
+    .mainMenuList{
+        flex-direction: column;
+        text-align: start;
+        gap:8px;
+    }
+    .menuItem{
+        justify-content: start;
+    }
+    .dropable_items{
+        position: static;
+    }
+    .megaMenu{
+        flex-direction: column;
+        padding: 0;
+        margin:0 15px;
+        box-shadow: 0 0 0 0;
+        text-align: start;
+        gap: 15px;
+    }
+    .megaMenu li a h4{
+        background-color: var(--common_color);
+        color: white;
+        padding: 6px;
+    }
+    .megaMenu li ul li{
+        display: flex;
+        justify-content: start;
+        cursor: pointer;
+    }
+    .megaMenu li ul li:hover{
+        background-color: rgb(206, 134, 0);
+        color: white;
+    }
+    .megaMenu li ul li:hover a{
+        color: white;
+    }
+    .megaMenu li img{
+        width: 140px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 6px;
+        box-shadow: 0.2px 1.6px 5px -1.7px;
+        border-radius: 5px;
+    }
+    .big{
+        width: 250px !important;
+    }
+    .animation{
+        width: 100%;
+        height: 100%;
+    }
+  }
+  
+  @media only screen and (min-width: 601px) {
+    .animation{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .animation{
+        display: none;
+    }
+    .humburgerIcon{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+    .animation{
+        display: block;
+    }
+    .humburgerIcon{
+        display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 1200px) {}

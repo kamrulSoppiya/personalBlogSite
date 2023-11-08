@@ -60,7 +60,7 @@
   }
  @media only screen and (max-width: 408px){
     .container{
-        margin: 9px 10px 0 10px;
+        margin: 0 10px 0 10px;
     }
   }
   @media only screen and (min-width: 409px) and (max-width: 600px) {
@@ -71,17 +71,21 @@
   
   @media only screen and (min-width: 601px) {
     .container{
-        margin: 9px 10px 0 10px;
+        margin: 0 10px 0 10px;
     }
   }
   
   @media only screen and (min-width: 768px) {
     .container{
-        margin: 10px 95px 10px 95px;
+        margin: 9px 10px 0 10px;
     }
   }
   
-  @media only screen and (min-width: 992px) {}
+  @media only screen and (min-width: 992px) {
+    .container{
+        margin: 10px 95px 10px 95px;
+    }
+  }
   
   @media only screen and (min-width: 1200px) {}
 
