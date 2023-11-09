@@ -1,4 +1,6 @@
-
+:root{
+    --common_shadow: 0.2px 1.6px 5px -1.7px;
+}
 nav{
     border-bottom: 1px solid var(--dark_gray);
 }
@@ -45,10 +47,58 @@ li button{
     text-align: center;
     position: relative;
     justify-content: center;
+    align-items: center;
 }
 .menuItem{
     display: flex;
     justify-content: center;
+}
+.drop_down_item{
+    position: relative;
+}
+.drop_down_item p, .menuItem p{
+    cursor: pointer;
+}
+.drop_down{
+    position: absolute;
+    top:40px;
+    /* left:0; */
+    background-color: white;
+    min-width: 130px;
+    display: block;
+    box-shadow: var(--common_shadow);
+}
+.drop_down_list{
+    padding: 10px 0;
+    position: relative;
+    cursor: pointer;
+}
+.drop_down_sub_item{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: white;
+    min-width: 130px;
+    display: block;
+    box-shadow: var(--common_shadow);
+}
+.drop_down_sub_item>li{
+    padding: 10px 0;
+}
+.drop_down_sub_item>li:hover{
+    background-color: var(--common_color);
+}
+.drop_down_sub_item a{
+    font-size: 18px;
+}
+.drop_down_list:hover {
+    background-color: var(--common_color);
+}
+/* .drop_down_sub_item{
+    display: none;
+} */
+.active{
+    display: block;
 }
 .dropable_items{
     position: absolute;
@@ -64,7 +114,7 @@ li button{
     padding: 10px;
     border-radius: 0 0 10px 10px;
     background-color: white;
-    box-shadow: 0.2px 1.6px 5px -1.7px;
+    box-shadow: var(--common_shadow);
 }
 .megaMenu li{
     width: calc(100%/3 -13.33px);
@@ -115,10 +165,12 @@ li button{
         flex-direction: column;
         text-align: start;
         gap:8px;
+        align-items: flex-start !important;
     }
     .menuItem{
         justify-content: start;
     }
+    
     .dropable_items{
         position: static;
     }
@@ -183,6 +235,7 @@ li button{
         flex-direction: column;
         text-align: start;
         gap:8px;
+        cursor: pointer;
     }
     .menuItem{
         justify-content: start;
@@ -197,6 +250,12 @@ li button{
         box-shadow: 0 0 0 0;
         text-align: start;
         gap: 15px;
+    }
+    .menuList:hover{
+        background-color: var(--common_color) !important;
+    }
+    .menuList:hover p, .menuList:hover a{
+        color: white;
     }
     .megaMenu li a h4{
         background-color: var(--common_color);
@@ -230,6 +289,9 @@ li button{
         width: 100%;
         height: 100%;
     }
+    .active{
+        color: white;
+    }
   }
   
   @media only screen and (min-width: 601px) and (max-width: 767px) {
@@ -253,6 +315,7 @@ li button{
         text-align: start;
         gap:8px;
     }
+
     .menuItem{
         justify-content: start;
     }
@@ -285,7 +348,7 @@ li button{
         background-color: rgb(206, 134, 0);
         color: white;
     }
-    .megaMenu li ul li:hover a{
+    .megaMenu li ul li:hover a, .megaMenu li ul li:hover p{
         color: white;
     }
     .megaMenu li img{
