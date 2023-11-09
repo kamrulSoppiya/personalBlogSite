@@ -214,6 +214,11 @@ li button{
         width: 100%;
         height: 100%;
     }
+
+    /* dROPdOWN */
+    .drop_down{
+        position: static;
+    }
   }
   @media only screen and (min-width: 409px) and (max-width: 600px) {
     nav{
@@ -236,6 +241,7 @@ li button{
         text-align: start;
         gap:8px;
         cursor: pointer;
+        align-items: flex-start !important;
     }
     .menuItem{
         justify-content: start;
@@ -251,6 +257,9 @@ li button{
         text-align: start;
         gap: 15px;
     }
+    /* .mainMenuList{
+        align-items: start;
+    } */
     .menuList:hover{
         background-color: var(--common_color) !important;
     }
@@ -291,6 +300,10 @@ li button{
     }
     .active{
         color: white;
+    }
+     /* dROPdOWN */
+     .drop_down{
+        position: static;
     }
   }
   
@@ -365,6 +378,10 @@ li button{
     .animation{
         width: 100%;
         height: 100%;
+    }
+     /* dROPdOWN */
+     .drop_down{
+        position: static;
     }
   }
   

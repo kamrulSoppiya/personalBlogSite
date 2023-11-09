@@ -256,13 +256,29 @@ export default function Test() {
                     }
                    
                     <li className={style.menuList}>
-                        <a href="">About</a>
-                        <ul className={`${style.drop_downItems} ${style.dropable_items}`}>
-                            <li><a href="">Programming</a></li>
-                            <li><a href="">Development</a></li>
-                            <li><a href="">Competetive Task</a></li>
-                        </ul>
+                    <p onClick={()=>toggleDropDownItem(2)}>About</p>
                     </li>
+                    {dropDownOpen[1].item && 
+                            <ul className={`${style.drop_down}`}>
+                                {dropDownOpen[1].subItem.map((subItem) => (
+                                    <li className={style.drop_down_list} onClick={() => dropDownSubItem(2, subItem.id)} key={subItem.id}>
+                                        <p>
+                                            {subItem.itemName}
+                                        </p>
+                                        {subItem.item && (
+                                        <ul className={style.drop_down_sub_item}>
+                                            {subItem.subItemName.map((itemName) => (
+                                                <li className={style.drop_down_list} key={itemName} onClick={(e) => e.stopPropagation()}>
+                                                    <a href="">{itemName}</a>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                    </li>
+                                    
+                                ))}
+                            </ul>
+                        }
                     <li className={style.menuList}><a href="">Contact</a></li>
                     <li><button>Buy Me A Coffee</button></li>
                     <li>

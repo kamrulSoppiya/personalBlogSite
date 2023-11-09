@@ -10,10 +10,10 @@ export default function Home() {
     <div>
         <Banner />
         <Carousel />
-        {/* <Article categoryName="Featured Aarticle"/>
+        <Article categoryName="Featured Aarticle"/>
         <Article categoryName="CSS"/>
         <Article categoryName="Javascript"/>
-        <Article categoryName="React JS"/> */}
+        <Article categoryName="React JS"/>
         <div className="" style={{display:'flex', justifyContent:'center', padding:'10px'}}>
             <Button type='button' className={style.showMoreBtn} children='Show More'/>
         </div>

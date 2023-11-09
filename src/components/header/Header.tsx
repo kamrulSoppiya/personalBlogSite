@@ -7,6 +7,7 @@ import { Spin as Hamburger } from 'hamburger-react'
 import Navbar from '../Navbar/Navbar';
 import { useState } from 'react';
 import Logo from '../Navbar/Logo';
+import Test from '../test/Test';
 export default function Header() {
     const [menuOpen, setmenuOpen] = useState(false);
 
@@ -14,17 +15,18 @@ export default function Header() {
         setmenuOpen(!menuOpen);
     }
     return (
-        <div className={style.wrapper}>
-            <div className={style.row}>
-                <div className="container">
-                    <div className={style.headerItems}>
-                        <Logo />
-                        <Hamburger direction="right" onToggle={collapseNavbar} />
-                    </div>
-                </div>
-            </div>
-            <Navbar isOpen = {menuOpen}/>
-        </div>
+        // <div className={style.wrapper}>
+        //     <div className={style.row}>
+        //         <div className="container">
+        //             <div className={style.headerItems}>
+        //                 <Logo />
+        //                 <Hamburger direction="right" onToggle={collapseNavbar} />
+        //             </div>
+        //         </div>
+        //     </div>
+        //     <Navbar isOpen = {menuOpen}/>
+        // </div>
+        <Test />
     )
 }
 

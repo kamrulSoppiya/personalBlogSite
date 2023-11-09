@@ -13,7 +13,7 @@ import AboutMe from "./components/pages/AboutMe";
 import Search from "./components/pages/Search";
 import Coffee from "./components/pages/Coffee";
 import Layout from "./components/pages/Layout";
-import Test from "./components/test/Test";
+// import Test from "./components/test/Test";
 // import Banner from "./components/banner/Banner";
 // import Subsribe from "./components/subScription/subsribe";
 // import SearchComponent from "./components/search/Search";
@@ -42,7 +42,7 @@ function App() {
       {/* <SearchComponent /> */}
       {/* <FooterContent /> */}
       {/* <SocialIcon /> */}
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Layout>
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -52,12 +52,12 @@ function App() {
                 <Route path="/coffee" element={<Coffee />}/>
             </Routes>
         </Layout>
-      </BrowserRouter> */}
+      </BrowserRouter>
       {/* <CategoryItem /> */}
       {/* <SearchComponent dummyData={dummyData}/> */}
       {/* <Subsribe /> */}
       {/* <Card /> */}
-      <Test />
+      {/* <Test /> */}
     </div>
   )
 }
